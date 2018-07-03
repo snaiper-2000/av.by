@@ -6,13 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by Dimka on 09.06.2018.
- */
 public class TestPageUser {
     WebDriver webDriver;
     WebDriverWait webDriverWait;
-    private static final String NAMEuSER = "Дмитрий!";
+    private static final String NAME_USER = "Дмитрий!";
     Site site;
 
     @Before
@@ -26,8 +23,7 @@ public class TestPageUser {
 
     @Test
     public void checkUrlPageAuthorization(){
-        //site.pageUser().chechUserNameOnPageUser();
-        Assert.assertEquals(site.pageUser().chechUserNameOnPageUser(), "Дмитрий!");
+        Assert.assertEquals(site.pageUser().chechUserNameOnPageUser(), NAME_USER);
     }
 
 

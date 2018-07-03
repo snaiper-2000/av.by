@@ -37,7 +37,6 @@ public class PageAuthorization {
     }
 
     private void clickButtonAuthorization(){
-        //webDriver.findElement(By.name("Submit")).click();
         webDriver.findElement(By.cssSelector("input[type = 'submit']")).click();
     }
 
@@ -46,6 +45,11 @@ public class PageAuthorization {
         inputPassword();
         inputNotSaveMe();
         clickButtonAuthorization();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

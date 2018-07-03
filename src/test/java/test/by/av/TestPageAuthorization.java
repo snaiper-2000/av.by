@@ -25,13 +25,14 @@ public class TestPageAuthorization {
         webDriver.get("https://cars.av.by/infiniti");
         site = new Site(webDriver);
     }
-    @Ignore
+
     @Test
     public void checkUrlPageAuthorization(){
-        site.pageAuthorization().clickAuthorization();
-        Assert.assertEquals(webDriver.getCurrentUrl(), "urlPageLogin");
+        site.pageAuthorization().authorizationOnPage();
+        System.out.println("!!!Проверка "+webDriver.getCurrentUrl());
+        Assert.assertEquals(webDriver.getCurrentUrl(), "https://av.by/login");
     }
-
+    @Ignore
     @Test
     public void checkUrlPageAfterAuthorization(){
         site.pageAuthorization().clickAuthorization();
