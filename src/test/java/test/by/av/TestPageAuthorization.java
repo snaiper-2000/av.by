@@ -13,8 +13,8 @@ public class TestPageAuthorization {
 
     WebDriver webDriver;
     WebDriverWait webDriverWait;
-    private static final String URLpAGElOGIN = "https://av.by/login";
-    private static final String URLpAGEuSER = "https://cars.av.by/user/mylist";
+    private static final String URLPAGELOGIN = "https://av.by/login";
+    private static final String URLPAGEUSER = "https://cars.av.by/user/mylist";
     Site site;
 
     @Before
@@ -30,7 +30,7 @@ public class TestPageAuthorization {
     public void checkUrlPageAuthorization(){
         site.pageAuthorization().authorizationOnPage();
         System.out.println("!!!Проверка "+webDriver.getCurrentUrl());
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://av.by/login");
+        Assert.assertEquals(webDriver.getCurrentUrl(), URLPAGELOGIN);
     }
     @Ignore
     @Test
@@ -38,7 +38,7 @@ public class TestPageAuthorization {
         site.pageAuthorization().clickAuthorization();
         site.pageAuthorization().authorizationOnPage();
         //System.out.println("ТЕСТ!!!!"+webDriver.getCurrentUrl());
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://cars.av.by/user/mylist");
+        Assert.assertEquals(webDriver.getCurrentUrl(), URLPAGEUSER);
     }
 
     @After
