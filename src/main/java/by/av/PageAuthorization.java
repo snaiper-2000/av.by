@@ -12,6 +12,8 @@ public class PageAuthorization {
     WebDriver webDriver;
     WebDriverWait webDriverWait;
     Site site;
+    private static final String LOGINUSER = "login";
+    private static final String PASSWORDUSER = "pass";
 
     PageAuthorization(WebDriver webDriver){
         this.webDriver = webDriver;
@@ -25,11 +27,11 @@ public class PageAuthorization {
     }
 
     private void inputLogin(){
-        webDriver.findElement(By.id("login")).sendKeys("snaiper-2000@mail.ru");
+        webDriver.findElement(By.id("login")).sendKeys(LOGINUSER);
     }
 
     private void inputPassword(){
-        webDriver.findElement(By.id("password")).sendKeys("KH17008042016");
+        webDriver.findElement(By.id("password")).sendKeys(PASSWORDUSER);
     }
 
     private void inputNotSaveMe(){
